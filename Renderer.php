@@ -1,12 +1,12 @@
 <?php
-// Èíòåðôåéñ äëÿ ðåàëèçàöèè
+// Ð˜Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ Ð´Ð»Ñ Ñ€ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸
 interface Renderer {
     public function renderHeader(string $title): string;
     public function renderBody(array $data): string;
     public function renderFooter(): string;
 }
 
-// Ðåàëèçàöèÿ â ôîðìàòå HTML
+// Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ HTML
 class HTMLRenderer implements Renderer {
     public function renderHeader(string $title): string {
         return "<h1>$title</h1>";
@@ -22,11 +22,11 @@ class HTMLRenderer implements Renderer {
     }
 
     public function renderFooter(): string {
-        return "<footer>© 2024 Company</footer>";
+        return "<footer>Â© 2024 Company</footer>";
     }
 }
 
-// Ðåàëèçàöèÿ â ôîðìàòå JSON
+// Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ JSON
 class JSONRenderer implements Renderer {
     public function renderHeader(string $title): string {
         return json_encode(["header" => $title]);
@@ -37,6 +37,6 @@ class JSONRenderer implements Renderer {
     }
 
     public function renderFooter(): string {
-        return json_encode(["footer" => "© 2024 Company"]);
+        return json_encode(["footer" => "Â© 2024 Company"]);
     }
 }
