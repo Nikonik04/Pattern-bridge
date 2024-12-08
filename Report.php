@@ -1,5 +1,5 @@
 <?php
-// Àáñòðàêöèÿ
+// ÐÐ±ÑÑ‚Ñ€Ð°ÐºÑ†Ð¸Ñ
 abstract class Report {
     protected $renderer;
 
